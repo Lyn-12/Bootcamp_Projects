@@ -17,3 +17,24 @@ will churn, so that they can apply preventative measures. Analyzing customer beh
 I propose using a machine learning model to predict which customers are most likely to leave in the upcoming months. We need to understand the meaning of customer churning in Sprint company context. For the purpose of these project, I will assume that customer churning means that the customer switches to the competitor, so they no longer use services provided by Sprint. I will assume we are predicting customer churn for the next 6 months. Additionally, we will need to understand what kind of data is available and how much historical data Sprint company has because the predictive model will use the trends from historical data to ake predictions using the current data.
 
 The following steps have been used to provide a solution to the problem of customer churn in order for the firm to take preventative actions in advance.
+
+**1. Data Collection**
+
+The first step for this analysis is data collection and since there is no pre defined data, we shall create our own data set from https://www.mockaroo.com/.
+The data has attributes / columns such as customer name, date the customer joined the company , the products they have purchased, date customer left the company (could be null indicating that the customer is still active), attrition which is the response variable and will take the values 0 - for customer left and 1 - for customer is still present, location of customer, Length of time a customer has been active since they first joined the company, payment history which shows if the customer was late for payments of the services or not, gender, age of the customer.
+
+**2. Data Cleaning Analysis and EDA**
+
+The second step after data collection is cleaning and manipulation of the data as well as exploring any patterns present in the data. Explore the relationships between churning rate and other explanatory variables. Convert continuous explanatory variables into categories, check for seasonality.
+
+**3. Feature Engineering and Selection**
+
+**4. Modele Selection**
+
+Choose the best machine learning model to predict which customers will churn. In this case I will choose Random forests which is a popular supervised machine learning algorithm. Random forests are used for supervised machine learning, where there is a labeled target variable.
+Random forests can be used for solving regression (numeric target variable) and classification (categorical target variable) problems.
+For a random forest classification problem (like the one we are dealing with), multiple decision trees are created using different random subsets of the data and features. Each decision tree is like an expert, providing its opinion on how to classify the data. Predictions are made by calculating the prediction for each decision tree, then taking the most popular result. 
+
+
+**4. Model Training and Testing**
+
