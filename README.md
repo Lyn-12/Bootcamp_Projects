@@ -33,6 +33,9 @@ The second step after data collection is cleaning and manipulation of the data a
 
 **3. Feature Engineering and Selection**
 
+Feature engineering is the process of transforming raw data into features that are suitable for machine learning models. Feature Engineering plays an extremely pivotal role in determining the performance of any machine learning model. The steps I would take in the feature engineering phase is imputing missing values using mean / median or mode for continuous variables and encoding the categorical variables to numeric using  dummy variables. Other steps could involve using Principal Component Analysis (PCA) for feature selection, which is the process of convert high dimensional data to low dimensional data by selecting the most important features that capture maximum information about the dataset. You can implement PCA using 
+Scikit-Learn library and select the variables that have the highest explained variance.
+
 **4. Modele Selection**
 
 Choose the best machine learning model to predict which customers will churn. In this case I will choose Random forests which is a popular supervised machine learning algorithm. Random forests are used for supervised machine learning, where there is a labeled target variable.
@@ -41,4 +44,11 @@ For a random forest classification problem (like the one we are dealing with), m
 
 
 **4. Model Training and Testing**
+
+Before training the model, there's need for plitting data into training and testing sets. We are expecting there will be some relationship between all the features and the target value, and the model’s job is to learn this relationship during training. When it comes to evaluate the model, we ask it to make predictions on a testing set where it only has access to the features (not the target values) and  wecan compare these predictions to the true value to judge how accurate the model is. Training the data to train and test is done randomly and we retain a seed value to be able to get the same responses for each model training, meaning the results are reproducible.
+
+The next step is figuring out how good the model is. To do this we make predictions on the test features in our case (X_test) and then compare the predictions to the known response values (y_test).
+We can calculate an accuracy using the mean average percentage error subtracted from 100 %, however, for unbalanced datasets, accuracy may not be the best evaluation metric to use  since it does not distinguish between the numbers of correctly classified examples of different classes. Hence, it may lead to erroneous conclusions. Considering that a lower percentage (assuming 10% of all customers churn) of customers may leave the company Sprint, then the distribution of the samples in the training dataset across the classes is not equal. We calculate the confusion matrix which enables calculation of other  more reliable evaluation metrices such as f1score to evaluate how good the model is.
+
+In order to quantify the usefulness of all the variables in the entire random forest, we can look at the relative importances of the variables. The variables that have a higher value are better predictors for example if 'payment_history' is at the top of the list, then it could mean that the variable is a good predictore for customer churning, meaning when a customer is late on the bill could indicat possible future churn. We can evaluate the results using real data, because the current data used above is just to show the steps to take in creating a model that predicts customer churn.
 

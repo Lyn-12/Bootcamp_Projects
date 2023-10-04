@@ -29,6 +29,8 @@ df['attrition'] = df['attrition'].astype(int) ## convert to integer
 df['payment_history'] = df['payment_history'].map({'Female': 1, 'Male': 0})
 #print(df.head())
 
+## drop missing values in the response variable
+df.dropna(axis=0, subset=['attrition'], inplace=True)
 ## Explore the rate of churning by gender
 gender_churn = df.groupby(['attrition' , 'gender'], as_index=False)['customer_id'].count()
 print(gender_churn)
@@ -38,7 +40,7 @@ print(general_churn)
 
 ## Prepare the data for training
 # Empty list to store columns with categorical data
-churning = df.copy()
+churning = df.copy() ## create a copy of the original dataframe
 categorical = []
 for col, value in churning.iteritems():
     if value.dtype == 'object':
@@ -75,7 +77,7 @@ rf_params = {
 rf = RandomForestClassifier(**rf_params)
 rf.fit(X_train, y_train)
 
-## make predictions for 
+## make predictions for customer churn
 rf_predictions = rf.predict(X_test)
 print("Accuracy score: {}".format(accuracy_score(y_test, rf_predictions)))
 print("="*80)
@@ -83,10 +85,15 @@ print(classification_report(y_test, rf_predictions))
 
 ## calculate confusion matrix
 CM = confusion_matrix(y_test, rf_predictions,labels = [0,1])
-#print(CM)
+print(CM)
+
 ## Plot the confusion Matrix with seaborn
 sns.heatmap(CM , annot=True, fmt='d').set_title('Terminated vs continuing confusion matrix (0 = terminated, 1 = continuing)')
 
+## Calculate other metrics
+f1score = f1_score(y_test, rf_predictions)
+recallscore = recall_score(y_test, rf_predictions)
+precisionscore = precision_score(y_test, rf_predictions)
 
 def plot_feature_importance(importance,names,model_type):
     #Create arrays from feature importance and feature names
