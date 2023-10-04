@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 
 
 ## import data from csv
-df = pd.read_csv('/Users/lynxy/Desktop/Lux_Datascience/Bootcamp_Projects/Project_data.csv', sep = ',')
+df = pd.read_csv('Project_data.csv', sep = ',')
 print(df.columns)
 # ['customer_id', 'first_name', 'last_name', 'start_date', 'gender','product', 'attrition', 'end_date', 
 #  'location', 'tenure', 'age','payment_history']

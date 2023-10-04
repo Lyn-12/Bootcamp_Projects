@@ -6,7 +6,7 @@ Question: Imagine you're working with Sprint, one of the biggest telecom compani
 
 So, if you were in charge of predicting customer churn how would you go about using machine learning to make a good guess about which customers might leave? Like, what steps would you take to create a machine learning model that can predict if someone's going to leave or not?
 
-### Proposed Solution
+## Proposed Solution
 
 **Understanding the problem statement**
 
@@ -50,5 +50,5 @@ Before training the model, there's need for plitting data into training and test
 The next step is figuring out how good the model is. To do this we make predictions on the test features in our case (X_test) and then compare the predictions to the known response values (y_test).
 We can calculate an accuracy using the mean average percentage error subtracted from 100 %, however, for unbalanced datasets, accuracy may not be the best evaluation metric to use  since it does not distinguish between the numbers of correctly classified examples of different classes. Hence, it may lead to erroneous conclusions. Considering that a lower percentage (assuming 10% of all customers churn) of customers may leave the company Sprint, then the distribution of the samples in the training dataset across the classes is not equal. We calculate the confusion matrix which enables calculation of other  more reliable evaluation metrices such as f1score to evaluate how good the model is.
 
-In order to quantify the usefulness of all the variables in the entire random forest, we can look at the relative importances of the variables. The variables that have a higher value are better predictors for example if 'payment_history' is at the top of the list, then it could mean that the variable is a good predictore for customer churning, meaning when a customer is late on the bill could indicat possible future churn. We can evaluate the results using real data, because the current data used above is just to show the steps to take in creating a model that predicts customer churn.
+In order to quantify the usefulness of all the variables in the entire random forest, we can look at the relative importances of the variables. The variables that have a higher value are better predictors for example if 'payment_history' is at the top of the list, then it could mean that the variable is a good predictore for customer churning, meaning when a customer is late on the bill could indicat possible future churn. We can evaluate the results using real data, because the current data used above is just to showcase the steps to take in creating a model that predicts customer churn.
 
