@@ -18,6 +18,10 @@ I propose using a machine learning model to predict which customers are most lik
 
 The following steps have been used to provide a solution to the problem of customer churn in order for the firm to take preventative actions in advance.
 
+### Steps to solution
+
+Follow code in __Week1_Project.py__
+
 **1. Data Collection**
 
 The first step for this analysis is data collection and since there is no pre defined data, we shall create our own data set from https://www.mockaroo.com/.
