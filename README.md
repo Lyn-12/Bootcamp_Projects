@@ -36,7 +36,7 @@ The second step after data collection is cleaning and manipulation of the data a
 Feature engineering is the process of transforming raw data into features that are suitable for machine learning models. Feature Engineering plays an extremely pivotal role in determining the performance of any machine learning model. The steps I would take in the feature engineering phase is imputing missing values using mean / median or mode for continuous variables and encoding the categorical variables to numeric using  dummy variables. Other steps could involve using Principal Component Analysis (PCA) for feature selection, which is the process of convert high dimensional data to low dimensional data by selecting the most important features that capture maximum information about the dataset. You can implement PCA using 
 Scikit-Learn library and select the variables that have the highest explained variance.
 
-**4. Modele Selection**
+**4. Model Selection**
 
 Choose the best machine learning model to predict which customers will churn. In this case I will choose Random forests which is a popular supervised machine learning algorithm. Random forests are used for supervised machine learning, where there is a labeled target variable.
 Random forests can be used for solving regression (numeric target variable) and classification (categorical target variable) problems.
