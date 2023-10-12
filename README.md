@@ -56,6 +56,17 @@ In order to quantify the usefulness of all the variables in the entire random fo
 ## Problem Definition
 Let’s say we want to build a model to predict booking prices on Airbnb. Between linear regression and random forest regression, which model would perform better and why?
 
-## 1. Linear Regression
+## Solution 
 
-## 2. RandomForest Regression
+**Refer to Week2_Project folder for the code**
+
+- Linear regression (LR) model that explains the relationship between a response variable (logprice) and explanatory variables. It assumes there is a linear relationship between the response and explanatory variables. In real life, the relationship between the response variable and explanatory variables may not be linear.
+
+- Random forest (RF) for regression is a supervised learning algorithm and bagging technique that uses an ensemble learning method for regression. RF is a treebased model that is more robust and its able to explain a more complex relationship between the response and explanatory variables.
+
+- Comparing the results above, we see that RF performs better than LR, this is in relation to the metrics as displayed above. The R2 value for RF is greater than the R2 value for LR, meaning that 74% of the variance in the response variable can be explained by the explanatory variables in RF model compared to only 57% explained variance in LR.
+This shows that the RF model fits the data much better than the LR model.
+
+- Comparing the other metrics for performance evaluation, we observe that RF model has less errors accross compared to LR. These errors show the difference between the actual proce values and predicted prices. The lower value of MAE, MSE, and RMSE then higher accuracy of a regression model, comparing teh values in the table above, RF has lower error values compared to LR model. For example, RF model has an RMSE value of 0.34 while LR model has an RMSE value of 0.44, meaning the RF model can predict the value of a response variable in absolute terms, with lesser error compared to LR model.
+
+In Conclusion, RF model perfroms better than LR model for prediction of Airbnb prices after comparing the performance metrics.
