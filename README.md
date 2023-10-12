@@ -1,7 +1,6 @@
+# Week 1 Project:
+
 ## Problem Definition
-
-Week 1 Project:
-
 Question: Imagine you're working with Sprint, one of the biggest telecom companies in the USA. They're really keen on figuring out how many customers might decide to leave them in the coming months. Luckily, they've got a bunch of past data about when customers have left before, as well as info about who these customers are, what they've bought, and other things like that.
 
 So, if you were in charge of predicting customer churn how would you go about using machine learning to make a good guess about which customers might leave? Like, what steps would you take to create a machine learning model that can predict if someone's going to leave or not?
@@ -52,3 +51,11 @@ We can calculate an accuracy using the mean average percentage error subtracted 
 
 In order to quantify the usefulness of all the variables in the entire random forest, we can look at the relative importances of the variables. The variables that have a higher value are better predictors for example if 'payment_history' is at the top of the list, then it could mean that the variable is a good predictore for customer churning, meaning when a customer is late on the bill could indicat possible future churn. We can evaluate the results using real data, because the current data used above is just to showcase the steps to take in creating a model that predicts customer churn.
 
+# Week 2 Project:
+
+## Problem Definition
+Let’s say we want to build a model to predict booking prices on Airbnb. Between linear regression and random forest regression, which model would perform better and why?
+
+## 1. Linear Regression
+
+## 2. RandomForest Regression

@@ -3,7 +3,7 @@ import pyforest
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
-import seaborn as sb
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import f1_score, recall_score, precision_score
@@ -124,5 +124,3 @@ plot_feature_importance(rf.feature_importances_,X_train.columns,'RANDOM FOREST')
 with open('RFclassificationmodel.pkl', 'wb') as model_file:
     pickle.dump(rf, model_file)
 
-##python3 -m venv sane-env  - create a virtual environment
-#source sane-env/bin/activate - activate the virtual environment
